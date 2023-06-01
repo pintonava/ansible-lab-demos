@@ -22,9 +22,10 @@
         }],
         "nic_list": [{
             "nic_type": "NORMAL_NIC",
-            "is_connected":true,
-            "ip_endpoint_list":[{
-                "ip_type":"DHCP"
+            "is_connected": true,
+            "ip_endpoint_list": [{
+                "ip_type": "STATIC",
+                "ip": "{{ ip_address }}"
             }],
             "subnet_reference": {
                 "kind": "subnet",
@@ -32,10 +33,10 @@
                 "uuid": "{{ vm_subnet.json.entities[0].metadata.uuid }}"
             }
         }],
-        "guest_tools":{
-            "nutanix_guest_tools":{
-                "state":"ENABLED",
-                "iso_mount_state":"MOUNTED"
+        "guest_tools": {
+            "nutanix_guest_tools": {
+                "state": "ENABLED",
+                "iso_mount_state": "MOUNTED"
             }
         }
     },
