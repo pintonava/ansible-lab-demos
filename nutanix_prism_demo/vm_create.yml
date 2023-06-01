@@ -66,7 +66,7 @@
 
     - name: Create VM json file from j2 template
       ansible.builtin.template:
-        src: templates/create_vm.json.j2
+        src: templates/create_vm_dhcp.json.j2
         dest: create_vm.json
 
     - name: Create VM
